@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Flaviano | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: #1e1e1e;
+      width: 300px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: slideInLeft 1s ease forwards;
+    }
+
+    .avatar {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #FFD700;
+    }
+
+    aside h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    aside p {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      width: 100%;
+    }
+
+    .info div {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .info div strong {
+      display: block;
+      color: #FFD700;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #FFD700;
+      bottom: -5px;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: #FFD700;
+    }
+
+    .section p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #FFD700;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <aside>
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/131878695?v=4" alt="Carlos Flaviano">
+    <h1>Carlos Flaviano</h1>
+    <p>Estudante | Web Developer</p>
+    <div class="info">
+      <div><strong>Email:</strong> 0001021638@senaimgaluno.com.br</div>
+      <div><strong>Idade:</strong> 17 anos</div>
+      <div><strong>Curso:</strong> Técnico em Informática para Internet - SENAI</div>
+    </div>
+  </aside>
+
+  <main>
+    <nav>
+      <a href="sobre.html">Sobre</a>
+      <a href="habilidades.html">Habilidades</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <section class="section" id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Olá! Meu nome é Carlos Flaviano, tenho 17 anos e sou estudante do curso Técnico em Informática para Internet no SENAI. Este portfólio foi criado exclusivamente como parte de uma atividade acadêmica, com o objetivo de aplicar na prática os conhecimentos adquiridos em sala de aula, além de apresentar um pouco da minha identidade como futuro profissional da área de tecnologia.
+      </p>
+      <p>
+        Desde cedo sou apaixonado por programação, tecnologia, desenvolvimento web e design de interfaces. Gosto de explorar novas linguagens e ferramentas que me ajudem a criar soluções funcionais, criativas e eficientes para o mundo digital.
+      </p>
+    </section>
+
+    <section class="section" id="habilidades">
+      <h2>💼 Habilidades</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>HTML</h3>
+          <p>Estrutura moderna de páginas web com boas práticas.</p>
+        </div>
+        <div class="card">
+          <h3>CSS</h3>
+          <p>Estilização responsiva e criativa com foco visual e usabilidade.</p>
+        </div>
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Adição de funcionalidades dinâmicas no frontend.</p>
+        </div>
+        <div class="card">
+          <h3>PHP</h3>
+          <p>Programação backend para sites e sistemas simples.</p>
+        </div>
+        <div class="card">
+          <h3>C</h3>
+          <p>Base sólida de lógica e estrutura de algoritmos.</p>
+        </div>
+        <div class="card">
+          <h3>MySQLi</h3>
+          <p>Manipulação e armazenamento de dados com SQL.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <h2>📧 Contato</h2>
+      <p>Se quiser falar comigo ou acompanhar minha evolução, me envie um e-mail: <br><strong>0001021638@senaimgaluno.com.br</strong></p>
+      <p><em>Este projeto é parte de uma atividade educativa do SENAI.</em></p>
+    </section>
+  </main>
+</body>
+
+</html>
